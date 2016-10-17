@@ -1,0 +1,3 @@
+Welcome To <%= $::fqdn %> up for <%= $::uptime %>
+
+Created user <%= $review::user %>
