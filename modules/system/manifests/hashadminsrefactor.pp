@@ -15,11 +15,10 @@ $admin_users = {
 'ralph@localhost' => { ensure => absent },
 }
 
-$admin_users.each |$user, $params| {
-		  
-		  mysql_user {'$user@localhost':
-		  	     ensure => pick($params['ensure'],$defaults['ensure']),
-			     max_queries_per_hour => pick(params['max_queries_per_user'],$defaults['max_queries_per_user']),
+$admin_users.each |$user, $params| {		  
+		  mysql_user {"${user}":
+		  	     ensure => pick($params['ensure'], $defaults['ensure']),
+			     max_queries_per_hour => pick($params['max_queries_per_hour'], $defaults['max_queries_per_hour']),
 		  }
 
 }
