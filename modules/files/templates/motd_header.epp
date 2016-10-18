@@ -1,0 +1,3 @@
+Welcome to <%= $fqdn %>
+This system is managed by Puppet. Any manual modifications will likely be
+overwritten. Make configuration changes in the upstream repository.
