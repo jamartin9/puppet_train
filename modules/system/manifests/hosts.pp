@@ -1,7 +1,12 @@
 class system::hosts{
-resources {'host':
+resources {'file':
 	  purge => true,
 }
+
+file { '/tmp/stuff.txt':
+     ensure => present,
+}
+
 host { 'jam.puppetlabs.vm':
   ensure       => 'present',
   host_aliases => ['jam'],
