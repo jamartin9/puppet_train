@@ -1,3 +1,4 @@
+
 define files::motd (
 $message = $name,
 $order = 10,

@@ -1,4 +1,5 @@
 class files {
+include files::motd
 file { '/etc/cron.allow':
 ensure => file,
 }
@@ -17,14 +18,13 @@ owner => 'root',
 group => 'root',
 mode => '0644',
 }
-concat::fragment { 'motd header':
-target => '/etc/motd',
+
+files::motd { 'motd header':
 order => '01',
-content => epp('files/motd_header.epp'),
+message => epp('files/motd_header.epp'),
 }
-concat::fragment { 'sample motd message':
-target => '/etc/motd',
+file::motd { 'sample motd message':
 order => '50',
-content => "This is a sample motd message\n",
-}
+message => "This is a sample motd message\n",
+} 
 }
