@@ -47,7 +47,8 @@ class blog {
   include ::mysql::server
   class {'::mysql::bindings':
     php_enable => true,
-  }~>
+    notify => Service['wordpress'],
+  }
   class {'apache':
     mpm_module => 'prefork',
     docroot => '/opt/wordpress',
