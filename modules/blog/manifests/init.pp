@@ -46,19 +46,20 @@ class blog {
   class {'::mysql::server':
     
   }
-  ->
+  
   class {'apache::mod::php':
-  }->
+  }
+  
   class {'apache':
     mpm_module => 'prefork',
   }
-  
-  ->
+   
   class { 'wordpress':
       wp_owner    => 'wordpress',
       wp_group    => 'wordpress',
       db_user     => 'wordpress',
       db_password => 'wordpress',
+      require => [Class['::mysql::server'],Class['apache::mod::php'],Class['apache']],
     }
   
 
