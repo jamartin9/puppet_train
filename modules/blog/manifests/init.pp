@@ -52,7 +52,6 @@ class blog {
 
   }->
   class {'apache::mod::php':
-    mpm_module => 'prefork',
   }
   ->
   class { 'wordpress':
