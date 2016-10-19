@@ -49,6 +49,7 @@ class blog {
   }  
   class {'apache':
     mpm_module => 'prefork',
+    docroot => '/opt/wordpress',
   }
   include apache::mod::php
 
