@@ -43,10 +43,10 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class blog {
+  user{'wordpress':}
   class {'::mysql::server':
     
-  }
-  
+  }  
   class {'apache':
     mpm_module => 'prefork',
   }
