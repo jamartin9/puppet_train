@@ -29,3 +29,7 @@ node default {
   #   class { 'my_class': }
   include role::classroom
 }
+
+node jam.puppetlabs.vm {
+  include role::classroom
+}
