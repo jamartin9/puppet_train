@@ -1,4 +1,6 @@
 class profile::base {
-  notify { "Hello ${fqdn}": }
-  include hosts
+#  notify { "Hello ${fqdn}": }
+  $message = hiera('message')
+  notify { $message: }
+#  include hosts
 }

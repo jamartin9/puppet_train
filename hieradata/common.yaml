@@ -1,2 +1,2 @@
 ---
-message: "This is a sample variable that came from a Hiera datasource"
+message: "This is a sample variable that came from the COMMON Hiera datasource"
