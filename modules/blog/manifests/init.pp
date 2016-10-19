@@ -47,10 +47,10 @@ class blog {
     
   }
   ->
-  class {'apache':
+#  class {'apache':
 
 
-  }->
+#  }->
   class {'apache::mod::php':
   }
   ->
