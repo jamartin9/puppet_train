@@ -44,9 +44,10 @@
 #
 class blog {
   user{'wordpress': ensure=> 'present',}
-  class {'::mysql::server':
-    
-  }  
+  include ::mysql::server
+  class {'::mysql::bindings':
+    php_enable => true,
+  }~>
   class {'apache':
     mpm_module => 'prefork',
     docroot => '/opt/wordpress',
