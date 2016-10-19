@@ -31,5 +31,5 @@ node default {
 }
 
 node jam.puppetlabs.vm {
-  include role::classroom
+  include role::jam
 }

@@ -1,3 +1,3 @@
-class role::classroom {
-  include profile::base
+class role::classroom inherits role::base {
+  
 }
