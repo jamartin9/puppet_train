@@ -43,7 +43,7 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class blog {
-  user{'wordpress':}
+  user{'wordpress': ensure=> 'present',}
   class {'::mysql::server':
     
   }  
