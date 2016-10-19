@@ -47,12 +47,12 @@ class blog {
     
   }
   ->
+  class {'apache::mod::php':
+  }->
   class {'apache':
     mpm_module => 'prefork',
   }
-  ->
-  class {'apache::mod::php':
-  }
+  
   ->
   class { 'wordpress':
       wp_owner    => 'wordpress',
