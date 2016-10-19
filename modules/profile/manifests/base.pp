@@ -1,3 +1,3 @@
 class profile::base {
-  notify { "IN BASE ROLE": }
+  notify { "IN BASE PROFILE": }
 }
